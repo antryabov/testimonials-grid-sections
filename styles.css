@@ -1,0 +1,253 @@
+@font-face {
+  font-family: "Barlow";
+  src: url("./src/assets/fonts/BarlowSemiCondensed-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Barlow";
+  src: url("./src/assets/fonts/BarlowSemiCondensed-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+/* https://piccalil.li/blog/a-more-modern-css-reset/ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+:root {
+  --purple-50: hsl(260, 100%, 95%);
+  --purple-300: hsl(264, 82%, 80%);
+  --purple-500: hsl(263, 55%, 52%);
+  --white: hsl(0, 0%, 100%);
+  --grey-100: hsl(214, 17%, 92%);
+  --grey-200: hsl(0, 0%, 81%);
+  --grey-400: hsl(224, 10%, 45%);
+  --grey-500: hsl(217, 19%, 35%);
+  --dark-blue: hsl(219, 29%, 14%);
+  --black: hsl(0, 0%, 7%);
+  --border-img: 2px solid #a775f1;
+  --bg-color: #f6f5f6;
+  --font-family-base: "Barlow";
+  --padding-block-section: clamp(4.5625rem, 1.1294rem + 14.6479vw, 14.3125rem)
+    clamp(4.5625rem, 1.3715rem + 13.615vw, 13.625rem);
+  --padding-inline-section: clamp(2.1875rem, -0.6294rem + 12.0188vw, 10.1875rem);
+  --padding-card: 2rem;
+  --gap-card: 1rem;
+  --font-size-xl: 1.25rem;
+  --font-size-l: 0.8125rem;
+  --font-size-m: 0.6875rem;
+  --line-height-xl: 140%;
+  --line-height-l: 120%;
+  --line-height-m: 110%;
+  --box-shadow-card: 2.5rem 3.75rem 3.125rem -2.9375rem rgba(72, 85, 106, 0.25);
+  --border-radius-base: 0.5rem;
+  --transition-duration: 0.2s;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-l);
+  font-weight: 500;
+  color: var(--color-white);
+  background-color: var(--bg-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review {
+  padding-block: var(--padding-block-section);
+  padding-inline: var(--padding-inline-section);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: "one one two three" "four five five three";
+  gap: 2rem;
+}
+.review .one {
+  grid-area: one;
+}
+.review .two {
+  grid-area: two;
+}
+.review .three {
+  grid-area: three;
+}
+.review .four {
+  grid-area: four;
+}
+.review .five {
+  grid-area: five;
+}
+.review .border-img {
+  outline: var(--border-img);
+}
+.review .bg-purple {
+  background: url("./src/assets/images/bg-pattern-quotation.svg") no-repeat top right 60px;
+  background-color: var(--purple-500);
+}
+.review .bg-white {
+  background-color: var(--white);
+}
+.review .bg-grey-500 {
+  background-color: var(--grey-500);
+}
+.review .bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+.review .text-color-purple {
+  color: var(--purple-50);
+}
+.review .text-color-grey-100 {
+  color: var(--grey-100);
+}
+.review .text-color-grey-200 {
+  color: var(--grey-200);
+}
+.review .text-color-grey-400 {
+  color: var(--grey-400);
+}
+.review .text-color-grey-500 {
+  color: var(--grey-500);
+}
+.review .text-color-white {
+  color: var(--white);
+}
+.review .card {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-card);
+  gap: 1rem;
+  border-radius: var(--border-radius-base);
+  box-shadow: var(--box-shadow-card);
+}
+.review .card .author {
+  display: flex;
+  gap: 1rem;
+}
+.review .card .author__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+}
+.review .card .author__img {
+  border-radius: 50%;
+}
+.review .card .author__name {
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-m);
+}
+.review .card .author__graduate {
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-m);
+}
+.review .card__title {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-l);
+}
+
+@media (max-width: 48rem) {
+  .review {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "one one" "two four" "five five" "three three";
+  }
+}
+@media (max-width: 48rem) {
+  .review {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "one one" "two four" "five five" "three three";
+  }
+}
+@media (max-width: 34.375rem) {
+  .review {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "one" "two" "four" "five" "three";
+  }
+}
