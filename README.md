@@ -2,20 +2,15 @@
 
 ## Overview
 
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for the site depending on their device's screen size
-
 ### Screenshot
 
-<img width="1161" alt="Screenshot 2025-06-07 at 17 01 22" src="https://github.com/user-attachments/assets/21783ade-c382-4393-90cb-95632051a864" />
+<img width="1165" alt="Screenshot 2025-06-07 at 19 21 10" src="https://github.com/user-attachments/assets/878b0f5b-1d27-45b2-a6c2-ff6a12aa629e" />
+
 
 ### Links
 
-- Solution URL: [solution](https://github.com/antryabov/four-card-feature)
-- Live Site URL: [live-site](https://antryabov.github.io/four-card-feature/)
+- Solution URL: [solution](https://github.com/antryabov/testimonials-grid-sections/)
+- Live Site URL: [live-site](https://antryabov.github.io/testimonials-grid-sections/)
 
 ## My process
 
