@@ -139,6 +139,7 @@ main {
 }
 
 .review {
+  max-width: 90rem;
   padding-block: var(--padding-block-section);
   padding-inline: var(--padding-inline-section);
   display: grid;
