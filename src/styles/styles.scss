@@ -178,18 +178,6 @@ main {
   }
 }
 
-@media (max-width: 48rem) {
-  .review {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    grid-template-areas:
-      'one one'
-      'two four'
-      'five five'
-      'three three';
-  }
-}
-
 @media (max-width: 34.375rem) {
   .review {
     grid-template-columns: 1fr;
